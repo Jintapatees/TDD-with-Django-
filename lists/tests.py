@@ -2,6 +2,7 @@
 from django.urls import resolve
 from django.test import TestCase
 from lists.views import home_page  
+from django.http import HttpRequest
 
 class HomePageTest(TestCase):
 
@@ -15,3 +16,4 @@ class HomePageTest(TestCase):
         self.assertTrue(html.startswith('<html>'))  
         self.assertIn('<title>To-Do lists</title>', html)  
         self.assertTrue(html.endswith('</html>'))
+
